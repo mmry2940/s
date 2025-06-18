@@ -92,20 +92,18 @@ function AppSidebar() {
           <SidebarMenu className="p-2">
             {navItems.map((item) => (
               <SidebarMenuItem key={item.href}>
-                <Link href={item.href}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))}
-                    tooltip={item.label}
-                    onClick={handleLinkClick}
-                    className="justify-start"
-                  >
-                    <>
-                      <item.icon className="h-5 w-5" />
-                      <span className="group-data-[collapsible=icon]:hidden">{item.label}</span>
-                    </>
-                  </SidebarMenuButton>
-                </Link>
+                <SidebarMenuButton
+                  asChild
+                  isActive={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))}
+                  tooltip={item.label}
+                  onClick={handleLinkClick}
+                  className="justify-start"
+                >
+                  <Link href={item.href}>
+                    <item.icon className="h-5 w-5" />
+                    <span className="group-data-[collapsible=icon]:hidden">{item.label}</span>
+                  </Link>
+                </SidebarMenuButton>
               </SidebarMenuItem>
             ))}
           </SidebarMenu>
@@ -117,4 +115,3 @@ function AppSidebar() {
     </Sidebar>
   );
 }
-
