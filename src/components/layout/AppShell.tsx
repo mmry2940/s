@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -91,7 +92,7 @@ function AppSidebar() {
           <SidebarMenu className="p-2">
             {navItems.map((item) => (
               <SidebarMenuItem key={item.href}>
-                <Link href={item.href} legacyBehavior passHref>
+                <Link href={item.href}>
                   <SidebarMenuButton
                     asChild
                     isActive={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))}
@@ -99,10 +100,10 @@ function AppSidebar() {
                     onClick={handleLinkClick}
                     className="justify-start"
                   >
-                    <a>
+                    <>
                       <item.icon className="h-5 w-5" />
                       <span className="group-data-[collapsible=icon]:hidden">{item.label}</span>
-                    </a>
+                    </>
                   </SidebarMenuButton>
                 </Link>
               </SidebarMenuItem>
@@ -116,3 +117,4 @@ function AppSidebar() {
     </Sidebar>
   );
 }
+
