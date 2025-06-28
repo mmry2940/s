@@ -11,7 +11,7 @@ export default function DashboardPage() {
     <div className="space-y-8">
       <Card className="shadow-lg">
         <CardHeader>
-          <CardTitle className="text-3xl font-headline">Welcome to Remote Pilot</CardTitle>
+          <CardTitle className="text-3xl font-headline">Welcome to Remote Functions</CardTitle>
           <CardDescription>Your intelligent assistant for managing remote servers efficiently and securely.</CardDescription>
         </CardHeader>
         <CardContent>

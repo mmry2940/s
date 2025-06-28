@@ -4,7 +4,7 @@ import { AppShell } from '@/components/layout/AppShell';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Remote Pilot',
+  title: 'Remote Functions',
   description: 'Manage remote servers with ease and intelligence.',
 };
 
