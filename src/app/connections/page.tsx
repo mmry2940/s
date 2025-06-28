@@ -164,7 +164,7 @@ function ConnectionFormDialog({ isOpen, setIsOpen, onSave, connection, setEditin
       setPassword(''); // Don't prefill password
     } else {
       // Reset form for new connection
-      setName(''); host(''); setPort(22); setUser(''); setAuthMethod('privateKey'); setKeyType(undefined); setPrivateKey(''); setPassword('');
+      setName(''); setHost(''); setPort(22); setUser(''); setAuthMethod('privateKey'); setKeyType(undefined); setPrivateKey(''); setPassword('');
     }
   }, [connection, isOpen]);
 
@@ -280,4 +280,3 @@ function ConnectionFormDialog({ isOpen, setIsOpen, onSave, connection, setEditin
     </Dialog>
   );
 }
-
