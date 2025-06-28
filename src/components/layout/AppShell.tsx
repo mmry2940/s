@@ -21,7 +21,6 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import { Home, Server, TerminalSquare, Cpu, FolderOpenDot, ListTree, History, Settings, BotMessageSquare } from 'lucide-react';
 import Logo from '@/components/icons/Logo';
-import { SheetTitle } from '../ui/sheet';
 
 const navItems = [
   { href: '/', label: 'Dashboard', icon: Home },
@@ -80,7 +79,6 @@ function AppSidebar() {
   
   return (
     <Sidebar collapsible="icon" className="border-r">
-       <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
       <SidebarHeader className="flex items-center justify-between p-2">
         <Link href="/" className="flex items-center gap-2 p-2" onClick={handleLinkClick}>
           <Logo className="h-8 w-8 text-primary" />
